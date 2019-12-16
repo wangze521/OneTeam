@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入layui的js、css-->
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+    <script src="../layui/layui.all.js"></script>
+    <!--引入jquery-->
+    <script src="../layui/jquery.min.js"></script>
+</head>
+<body>
+<div style="padding: 20px; background-color: #F2F2F2;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12" style="height: 800px">
+            <div class="layui-card" style="height: 790px">
+                <div class="layui-card-body">
+                    <div id="upda" >
+
+                        <form class="layui-form" action="" lay-filter="example1" style="margin-left: 0px">
+
+                            <input name="hospitalid"   type="hidden">
+
+                            <div class="layui-row">
+
+                                <div class="layui-col-md6">
+                                    诊所编号
+                                </div>
+                                <div class="layui-col-md5">
+                                    诊所名称
+                                </div>
+                            </div>
+
+                            <div class="layui-row">
+                                <div class="layui-col-md6">
+                                    <div class="layui-form-item">
+
+                                        <input type="text" name="hospitalnumber" lay-verify="title" autocomplete="off" style="width: 300px"  readonly  class="layui-input">
+
+                                    </div>
+                                </div>
+                                <div class="layui-col-md6">
+                                    <div class="layui-form-item">
+
+                                        <input type="text" name="hospitalname"  autocomplete="off" style="width: 300px"  class="layui-input">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="layui-row">
+                                <div class="layui-col-md4">
+                                    诊所人员
+                                </div>
+                                <div class="layui-col-md4">
+                                    诊所人员电话
+                                </div>
+                                <div class="layui-col-md4">
+                                    诊所人员邮箱
+                                </div>
+                            </div>
+
+                            <div class="layui-row">
+                                <div class="layui-col-md4">
+                                    <div class="layui-form-item">
+
+                                        <input type="text" name="hospitalpeople" lay-verify="title" style="width: 300px"   autocomplete="off"  class="layui-input">
+
+                                    </div>
+                                </div>
+                                <div class="layui-col-md4">
+                                    <div class="layui-form-item">
+
+                                        <input type="text" name="hospitalphone"  autocomplete="off"style="width: 300px"  class="layui-input">
+
+                                    </div>
+                                </div>
+                                <div class="layui-col-md4">
+                                    <div class="layui-form-item">
+
+                                        <input type="text" name="hospitalemail"  autocomplete="off"style="width: 300px"  class="layui-input">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="layui-row" style="margin-top: 15px">
+                                <div class="layui-col-md4">
+                                    诊所介绍
+                                </div>
+                            </div>
+
+                            <div class="layui-row" >
+                                <div class="layui-col-md7">
+                                    <input type="text" name="hospitalinfo"  autocomplete="off"  style="width: 1005px" class="layui-input">
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item">
+                               <div class="layui-input-block">
+                                  <button type="submit" class="layui-btn" lay-submit="" lay-filter="update">立即提交</button>
+                               </div>
+                            </div>
+                        </form>
+                        <div class="layui-row" >
+                            <div class="layui-col-md10">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <div class="layui-row" >
+                            <div class="layui-col-md10">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <div class="layui-row" >
+                            <div class="layui-col-md10">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <div class="layui-row" >
+                            <div class="layui-col-md10">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <div class="layui-row" >
+                            <div class="layui-col-md10">
+                                <hr width="1050px" style="height: 3px;color:black">
+                                地　　址： （东单院区）北京市东城区帅府园一号，100730；（西单院区）北京市西城区大木仓胡同41号，100032
+                            </div>
+                        </div>
+                        <div class="layui-row" >
+                            <div class="layui-col-md4">
+                                服务热线： 010-69156114
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    layui.use(['tree','jquery','element','form','table','layer','laydate'],function () {
+        var layer = layui.layer;
+        var form = layui.form;
+        form.render()
+        var laydate = layui.laydate
+        var table = layui.table
+        var table = layui.table;
+        var element = layui.element;
+        var $ = layui.jquery;
+        var tree = layui.tree;
+
+        $.ajax({
+            url:"../hcc/queryhospital",
+            data:{"id":1},
+            type:"post",
+            success:function(data){
+                form.val('example1', {
+                    "hospitalid":data.hospitalid,
+                    "hospitalname":data.hospitalname,
+                    "hospitalnumber":data.hospitalnumber
+                    ,"hospitalpeople":data.hospitalpeople
+                    ,"hospitalphone":data.hospitalphone
+                    ,"hospitalemail":data.hospitalemail
+                    ,"hospitalinfo":data.hospitalinfo,
+                    "hospitaladdress":data.hospitaladdress
+                })
+
+
+            }
+
+
+        })
+
+        form.on('submit(update)',function (data) {
+            console.log(data)
+
+            console.log(data.field)
+            var field = data.field
+            $.ajax({
+                url:"../hcc/updatehospital",
+                type:"post",
+                data:field,
+                success:function () {
+                    form.render();
+                }
+            })
+        })
+
+    })
+
+</script>
+</html>

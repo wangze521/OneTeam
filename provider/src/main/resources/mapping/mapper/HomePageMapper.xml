@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.mapper.HomePageMapper" >
+
+<select id="EcharsShow" resultType="com.jk.model.wss.IncomeModel">
+    select * from income;
+</select>
+
+<select id="RegistrationShow" resultType="com.jk.model.wss.RegistrationModel">
+    select count from registration where to_days(date)=to_days(now());
+</select>
+
+<select id="ReceptionShow" resultType="com.jk.model.wss.ReceptionModel">
+    select count from reception where to_days(date)=to_days(now());
+</select>
+
+    <select id="incomeShow" resultType="com.jk.model.wss.IncomeModel">
+    select count from income where to_days(date)=to_days(now());
+</select>
+
+    <select id="outpatient" resultType="com.jk.model.wss.OutpatientModel">
+    select o.id,o.status,o.number,o.name,o.sex,o.age,o.phone,o.type,o.date,ke.name as kename,d.jobname
+    from outpatient  o
+    left join wz_keshi ke
+    on o.office = ke.id
+    left join login_doctor d
+    on o.doctor = d.id
+    where to_days(date)=to_days(now());
+</select>
+
+</mapper>

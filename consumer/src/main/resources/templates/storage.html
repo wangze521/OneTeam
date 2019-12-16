@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入layui的js、css-->
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+    <script src="../layui/layui.all.js"></script>
+    <!--引入jquery-->
+    <script src="../layui/jquery.min.js"></script>
+</head>
+<body>
+
+<div style="color: black;background: #E6E6FA">
+    <span id="span1"></span>
+</div>
+
+
+
+
+<table class="layui-hide" id="Sto"></table>
+</body>
+<script>
+    layui.use(['table','jquery','layer'], function() {
+
+        var table = layui.table;
+
+        var $ = layui.jquery;
+
+        table.render({
+            elem: '#Sto'
+            , url: '../Storage'
+            , cols: [
+                [
+                    , {field: 'storageId', width:$(this).width*0.1, title: '序号'}
+                    , {field: 'storageNum', width:$(this).width*0.1, title: '入库编号'}
+                    , {field: 'storageType', width:$(this).width*0.1, title: '入库类型',templet: function (a) {
+                        if (a.storageType =1) {
+                            return "类型1";
+                        }
+                        if (a.storageType =2) {
+                            return "类型2";
+                        }
+                        if (a.storageType ="") {
+                            return "";
+                        }
+                }
+                }
+                    , {field: 'supplierName', width:$(this).width*0.1, title: '供应商名称'}
+                    , {field: 'makingPersonnel', width:$(this).width*0.1, title: '制单人员'}
+                    , {field: 'purchaseAmount', width:$(this).width*0.1, title: '采购金额'}
+                    , {field: 'retailAmount', width:$(this).width*0.1, title: '零售金额'}
+                    , {field: 'warehousePersonnel', width:$(this).width*0.1, title: '入库人员'}
+                    , {field: 'createTime', width:$(this).width*0.1, title: '创建时间'}
+                    , {field: 'status', width:$(this).width*0.1, title: '状态', templet: function (a) {
+                        if (a.status =1) {
+                            return "采购入库";
+                        }
+                        if (a.status =2) {
+                            return "未入库";
+                        }
+                        if (a.batch ="") {
+                            return "";
+                        }
+
+                    }
+                }
+                    , {field: 'xxx', width:$(this).width*0.2, title: '操作',templet: function (b) {
+
+                            return "<button type='button' class='layui-btn layui-btn-sm' onclick='find("+b.storageId+")'><i class='layui-icon'>查看</i></button>"+
+
+                            "<button type='button' class='layui-btn layui-btn-sm' onclick='storage("+b.storageId+")'><i class='layui-icon'>再次入库</i></button>"
+                    }
+
+                    }
+                ]
+            ]
+            , page: true
+        })
+
+        find=function(storageId) {
+            $.ajax({
+                url:'../findStorageById',
+                data:{storageId:storageId},
+                success:function(data){
+                    d = new Date(Math.round(new Date().getTime() / 1000) * 1000);
+                    var da= (d.getFullYear()) + "年" + (d.getMonth() + 1) + "月" + (d.getDate()) + "日 "
+                    var str="";
+                       str+="<h2>🚑入库详情-审核通过</h2>"+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "入库订单: "+data.storageNum+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+
+                           "入库日期: "+data.createTime+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "入库人员: "+data.warehousePersonnel+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "入库类型："+data.storageType +"<br><br>"+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "供应商: "+data.supplierName+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "制单日期："+da+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;" +
+                           "制单人员: "+data.makingPersonnel+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "入库备注："+"无"+"<br><br>"+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "审核日期："+da+
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                           "&nbsp;&nbsp;&nbsp;" +
+                           "审核人员："+"夏祎赟";
+
+                 $("#span1").html(str);
+                },error:function(){
+
+                }
+            })
+        }
+        
+        
+        
+    })
+
+
+
+
+</script>
+</html>

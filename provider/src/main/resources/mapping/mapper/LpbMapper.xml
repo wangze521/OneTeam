@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.mapper.LpbMapper">
+  <resultMap id="BaseResultMap" type="com.jk.model.lpb.lpbshoufei">
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="dingdan" property="dingdan" jdbcType="VARCHAR" />
+    <result column="dingdantype" property="dingdantype" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="nainling" property="nainling" jdbcType="INTEGER" />
+    <result column="shouji" property="shouji" jdbcType="INTEGER" />
+    <result column="keshi" property="keshi" jdbcType="VARCHAR" />
+    <result column="yisheng" property="yisheng" jdbcType="VARCHAR" />
+    <result column="shijian" property="shijian" jdbcType="DATE" />
+    <result column="yingshoujinger" property="yingshoujinger" jdbcType="DOUBLE" />
+    <result column="shoufeiinfo" property="shoufeiinfo" jdbcType="VARCHAR" />
+    <result column="caozuo" property="caozuo" jdbcType="VARCHAR" />
+    <result column="xingbie" property="xingbie" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, dingdan, dingdantype, name, nainling, shouji, keshi, yisheng, shijian, yingshoujinger, 
+    shoufeiinfo, caozuo, xingbie
+  </sql>
+
+
+
+<!--待收费查询-->
+  <select id="query" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from lpbshoufei l where l.shoufeiinfo=1
+
+  </select>
+
+<!--待收费删除-->
+  <delete id="lpbdel" parameterType="java.lang.Integer" >
+    delete from lpbshoufei
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+<!--已收费查询-->
+  <select id="lpbyishoufei" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from lpbshoufei l where l.shoufeiinfo=2
+
+  </select>
+  <!--已退费查询-->
+
+  <select id="lpbyituifeiquery" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from lpbshoufei l where l.shoufeiinfo=3
+
+  </select>
+  <!--待收费修改-->
+  <update id="lpbupdate" parameterType="com.jk.model.lpb.lpbshoufei" >
+    update lpbshoufei
+    set dingdan = #{dingdan,jdbcType=VARCHAR},
+      dingdantype = #{dingdantype,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      nainling = #{nainling,jdbcType=INTEGER},
+      shouji = #{shouji,jdbcType=INTEGER},
+      keshi = #{keshi,jdbcType=VARCHAR},
+      yisheng = #{yisheng,jdbcType=VARCHAR},
+      shijian = #{shijian,jdbcType=DATE},
+      yingshoujinger = #{yingshoujinger,jdbcType=DOUBLE}
+
+    where id = #{id,jdbcType=INTEGER}
+
+  </update>
+  <!--待收费状态修改成已收费-->
+  <update id="lpbyishoufeiid" parameterType="com.jk.model.lpb.lpbshoufei" >
+    update lpbshoufei
+    set
+   shoufeiinfo = 2
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <!--待收费修改成已退费-->
+  <update id="lpbyituifeiid" parameterType="com.jk.model.lpb.lpbshoufei" >
+    update lpbshoufei
+    set
+   shoufeiinfo = 3
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+<!--待收费-->
+  <update id="lpbdaishoufeiid" parameterType="com.jk.model.lpb.lpbshoufei" >
+    update lpbshoufei
+    set
+   shoufeiinfo = 1
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+</mapper>

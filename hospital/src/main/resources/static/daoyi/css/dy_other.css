@@ -1,0 +1,389 @@
+.menu .xin {display:block; width:941px; height:35px; padding:3px 0 0 29px;}
+.menu .xin span {float:left; height:22px; overflow:hidden;}
+.menu .xin span a {display:block; width:63px; height:22px; overflow:hidden; text-align:center; line-height:23px; background:url(../images/bg_points.gif) no-repeat 0 50px;}
+.menu .xin span a.s2 {width:40px;}
+.menu .xin i {float:left; width:16px; height:22px; overflow:hidden; padding-right:1px; text-align:center; line-height:22px; color:#94B5C4;}
+.menu .xin #now2 a {font-weight:bold; background-position:0 -441px; color:#333;}
+.menu .xin #now2 a:hover {color:#333; text-decoration:none; cursor:default;}
+.menu .xin #now2 a.s2 {background-position:-62px -441px;}
+
+.newss {width:666px; overflow:hidden; padding:0 6px 30px; border:1px solid #D9E6EB; border-top:none;}
+.newss ul {width:666px; overflow:hidden;}
+.newss ul li {width:636px; overflow:hidden; padding:15px 15px 12px; background:url(../images/bg_line_x.gif) no-repeat left bottom;}
+.newss ul li .li-top {float:left; width:631px; height:26px; overflow:hidden; padding-right:5px;}
+.newss ul li .li-top span {float:left; width:410px; overflow:hidden; padding-left:10px; font:14px SimSun; white-space:nowrap; text-overflow:ellipsis; background:url(../images/bg_points.gif) no-repeat -1px -117px;}
+.newss ul li .li-top cite {float:left; overflow:hidden; padding:1px 0 0 10px; font-family:Verdana; white-space:nowrap; color:#999;}
+.newss ul li .li-top i {float:right; overflow:hidden; padding-top:1px; font-family:Verdana; white-space:nowrap; color:#999;}
+.newss ul li font {color:#f60;}
+.newss ul li p {float:left; width:617px; height:48px; overflow:hidden; padding:0 5px 0 14px; line-height:24px; text-align:justify; text-justify:distribute;}
+.newss ul li p font {font-size:12px;}
+
+.keshi-zhong {width:670px; overflow:hidden; padding:0 4px 30px; border:1px solid #D9E6EB; border-top:none;}
+.keshi-zhong dl {width:670px; overflow:hidden; padding-top:20px;}
+.keshi-zhong dt {width:650px; height:32px; overflow:hidden; margin-left:10px; position:relative;}
+.keshi-zhong dt strong {float:left; height:32px; overflow:hidden; padding:0 10px 0 25px; font:bold 14px/23px SimSun; background:#fff url(../images/bg_points.gif) no-repeat -71px -61px; position:relative; z-index:2;}
+.keshi-zhong dt i {width:650px; height:0; overflow:hidden; border-top:1px solid #E4EDF1; position:absolute; left:0; top:10px; z-index:1;}
+.keshi-zhong dd {float:left; width:100px; height:37px; overflow:hidden; margin:10px 0 0 10px; display:inline;}
+.keshi-zhong dd a {display:block; width:90px; height:37px; overflow:hidden; padding:0 5px; line-height:37px; text-align:center; white-space:nowrap; text-overflow:ellipsis; background:url(../images/bg_some.png) no-repeat -231px -39px;}
+.keshi-zhong dd a:hover {background-position:-231px -76px; text-decoration:none;}
+.keshi-list {width:666px; overflow:hidden; padding:2px 6px 10px; border:1px solid #D9E6EB; border-top:none;}
+.keshi-list dl {width:546px; overflow:hidden; padding:15px 0 15px 120px; font:14px/26px SimSun; background:url(../images/bg_line_x.gif) no-repeat left bottom; position:relative;}
+.keshi-list dt {width:120px; overflow:hidden; text-align:right; position:absolute; left:0; top:15px;}
+.keshi-list dt font {margin-left:6px; font-size:12px; font-weight:bold; color:#43A2D0;}
+.keshi-list dd {float:left; width:125px; overflow:hidden; margin-left:10px; display:inline; white-space:nowrap; text-overflow:ellipsis;}
+.keshi-list .noline {display:block; width:666px; height:0; overflow:hidden; margin-top:-1px; border-top:1px solid #fff; position:relative;}
+.keshi-js {width:666px; overflow:hidden; padding:10px 6px 20px; border:1px solid #D9E6EB; border-top:none;}
+.keshi-js .intro {width:640px; overflow:hidden; padding:8px 13px 0; font:14px/26px SimSun; text-align:justify; text-justify:distribute;}
+.keshi-js .intro p {width:640px; overflow:hidden; text-align:justify; text-justify:distribute;}
+.keshi-js dl {width:100%; height:34px; overflow:hidden; font:12px/34px SimSun; background:url(../images/bg_line_x.gif) no-repeat left bottom;}
+.keshi-js dt {float:left; width:120px; height:34px; overflow:hidden; font-weight:bold; text-align:right;}
+.keshi-js dt font {margin-left:8px; font-size:12px; color:#43A2D0;}
+.keshi-js dt a {color:#333; text-decoration:none;}
+.keshi-js dt a:hover {color:#f60; text-decoration:underline;}
+.keshi-js dd {float:left; width:68px; overflow:hidden; margin-left:10px; display:inline; white-space:nowrap; text-overflow:ellipsis;}
+.keshi-js dd img{ position:absolute; width:12px; height:12px; margin:11px 0 0 5px;*margin:0 0 0 5px;} /*20130310 chenliexin*/
+.keshi-js .as {display:block; width:666px; overflow:hidden; padding-top:10px; font:12px/26px SimSun;}
+.keshi-js .as a {float:left; margin:0 7px 0 13px; white-space:nowrap; color:#333; text-decoration:none;}
+.keshi-js .as a:hover {color:#f60; text-decoration:underline;}
+.keshi-js .as .gd {color:#07b;}
+.keshi-js ul {width:666px; overflow:hidden; padding-bottom:14px; border-bottom:1px solid #E4EDF1;}
+.keshi-js ul li {float:left; width:320px; height:82px; overflow:hidden; margin:10px 0 0 10px; display:inline;}
+.keshi-js ul li img {float:left; width:60px; height:75px; margin-right:10px;}
+.keshi-js ul li strong {float:left; width:250px; height:20px; overflow:hidden; font-weight:normal; white-space:nowrap; text-overflow:ellipsis; color:#666;}
+.keshi-js ul li strong a {font-weight:bold;}
+.keshi-js ul li span {float:left; width:250px; overflow:hidden; line-height:20px; white-space:nowrap; text-overflow:ellipsis;}
+.keshi-js ul li p {float:left; width:250px; overflow:hidden; line-height:20px;}
+.keshi-js ul li font {font-size:12px; font-weight:bold;}
+.keshi-js ol {width:666px; overflow:hidden; margin-top:6px; font:12px/35px SimSun; background:url(../images/bg_dd.gif) repeat-y -1px 0;}
+.keshi-js ol li {float:left; width:154px; overflow:hidden; margin-left:10px; display:inline; white-space:nowrap; text-overflow:ellipsis;}
+.keshi-js ol li cite {color:#666;}
+.keshi-js .noline {display:block; width:100%; height:0; overflow:hidden; margin-top:-1px; border-top:1px solid #fff;}
+.keshi-js2 {width:746px;}
+.keshi-js .keshi-js-more{ padding:8px 0 0;}
+.keshi-js .keshi-js-more a{ display:inline-block; zoom:1; margin:0 9px; line-height:26px; color:#333333;}
+.keshi-js .keshi-js-more .more{ color:#0077BB;}
+.keshi-js .keshi-js-more a:hover{color:#FF6600;}
+.keshi-js .keshi-js-more .more:hover{color:#FF6600;}
+.keshi-js ul li p b{ font-weight:bold;}
+.zi_liao p {width:638px; padding:0 5px; padding-bottom:20px; font:14px/26px SimSun; text-indent:2em; text-align:justify; text-justify:distribute;}
+.zi_liao p br {display:none;}
+
+.tui {width:268px; overflow:hidden; margin-bottom:10px; padding:12px 5px; border:1px solid #D9E6EB; border-top:none;}
+.tui li {float:left; width:264px; overflow:hidden; padding-left:4px; font:12px/26px SimSun; white-space:nowrap; text-overflow:ellipsis;}
+.tui li .yuan {margin-right:6px; color:#333;}
+.tui li .yuan:hover {color:#f60;}
+.tui li.hasline {height:1px; margin:12px 0; background:url(../images/bg_line_x.gif) no-repeat;}
+.tui li.limore {text-align:right; background:none;}
+.tui li.limore a {margin-right:10px; color:#666; text-decoration:none;}
+.tui li.limore a:hover {color:#f60; text-decoration:underline;}
+.tui2{overflow:hidden;height:100%;}
+.tui2 li{width:130px;float:left;}
+.tui2 li.hasline {clear:both;width:264px;}
+
+.pics {width:670px; overflow:hidden; padding:0 4px 30px; border:1px solid #D9E6EB; border-top:none;}
+.pics dl {width:670px; overflow:hidden; padding-top:20px;}
+.pics dt {width:650px; height:32px; overflow:hidden; margin-left:10px; position:relative;}
+.pics dt strong {float:left; height:32px; overflow:hidden; padding:0 10px 0 30px; font:bold 14px/23px SimSun; background:#fff url(../images/bg_points.gif) no-repeat -83px -404px; position:relative; z-index:2;}
+.pics dt .gd {float:right; padding:3px 0 0 10px; background:#fff; position:relative; z-index:2;}
+.pics dt i {width:650px; height:0; overflow:hidden; border-top:1px solid #E4EDF1; position:absolute; left:0; top:10px; z-index:1;}
+.pics dd {float:left; width:120px; height:120px; overflow:hidden; margin:10px 23px 0; display:inline;}
+.pics dd img {float:left; width:120px; height:90px;}
+.pics dd span {float:left; width:120px; overflow:hidden; padding-top:10px; text-align:center; white-space:nowrap; text-overflow:ellipsis;}
+.pics dd span a {color:#333; text-decoration:none;}
+.pics dd span a:hover {color:#f60; text-decoration:underline;}
+
+.recommend {width:668px; overflow:hidden; padding:10px 5px 20px; border:1px solid #D9E6EB; border-top:none;}
+.recommend .re-top {display:block; width:656px; height:40px; overflow:hidden; padding:4px 0 0 12px;}
+.recommend .re-top a {float:left; height:19px; height:18px\9; padding:6px 26px 0; padding-top:7px\9; margin-right:-1px; text-align:center; border:1px solid #43A2D0; color:#333; position:relative;}
+.recommend .re-top a:hover {background:#ECF5FB; color:#333; text-decoration:none;}
+.recommend .re-top a i {display:none; width:0px; height:0px; overflow:hidden; margin-left:-6px; border:6px solid #fff; border-top-color:#43A2D0; position:absolute; left:50%; top:26px;}
+.recommend .re-top a#now4 {font-weight:bold; background:#43A2D0; color:#fff; cursor:default;}
+.recommend .re-top a#now4:hover {color:#fff; text-decoration:none;}
+.recommend .re-top a#now4 i {display:block;}
+.recommend .re-all {display:block; width:616px; height:30px; overflow:hidden; padding:4px 26px 10px; font:14px/30px SimSun; background:url(../images/bg_points.gif) no-repeat 14px -104px;}
+.recommend .re-all font {font:bold 14px/30px Verdana; color:#590;}
+.recommend .bts {display:block; width:657px; height:26px; overflow:hidden; padding-left:11px; line-height:27px; border-top:1px solid #E3EBEE; border-bottom:1px solid #E3EBEE; background:#F9FBFB; color:#666;}
+.recommend .bts li {float:left; cursor:default;}
+.recommend .bts .bt1 {width:71px;}
+.recommend .bts .bt2 {width:150px;}
+.recommend .bts .bt3 {width:204px;}
+.recommend .bts .bt4 {width:82px; text-align:center;}
+.recommend .bts .bt5 {width:221px;}
+.recommend .bts .bt6 {width:354px;}
+.recommend .re-dl {width:668px; overflow:hidden;}
+.recommend .re-dl dl {width:657px; height:84px; overflow:hidden; padding:13px 0 13px 11px; background:url(../images/bg_line_x.gif) no-repeat left bottom; color:#666;}
+.recommend .re-dl dl.dl3 {background-color:#F6F9FA;}
+.recommend .re-dl dt {float:left; width:62px; overflow:hidden; padding-right:9px;}
+.recommend .re-dl dt strong {float:left; width:62px; height:20px; overflow:hidden; font:14px/20px SimSun;}
+.recommend .re-dl dt cite {float:left; width:62px; line-height:20px;}
+.recommend .re-dl dd {float:left; height:84px; overflow:hidden;}
+.recommend .re-dl .dd1 {width:124px; padding-right:26px; line-height:20px; text-align:justify; text-justify:distribute;}
+.recommend .re-dl .dd2 {width:195px; padding-right:9px;}
+.recommend .re-dl .dd2 table {width:100%; border-right:1px solid #E4F0F6; border-bottom:1px solid #E4F0F6; border-collapse:collapse; color:#666;}
+.recommend .re-dl .dd2 table th {padding:2px 0; font:12px SimSun; text-align:center; border:1px solid #fff; background:#E4F0F6;}
+.recommend .re-dl .dd2 table .th1 {width:26px;}
+.recommend .re-dl .dd2 table .th2 {border-right-color:#E4F0F6;}
+.recommend .re-dl .dd2 table .th3 {border-bottom-color:#E4F0F6;}
+.recommend .re-dl .dd2 table td {width:23px; padding:3px 0; text-align:center; vertical-align:middle; border:1px solid #E4F0F6;}
+.recommend .re-dl .dd3 {width:82px;}
+.recommend .re-dl .dd3 a {display:block; width:53px; height:18px; overflow:hidden; margin:0 auto; background:url(../images/bg_other.gif) no-repeat;}
+.recommend .re-dl .dd3 .a1 {margin-top:18px; background-position:-21px -79px;}
+.recommend .re-dl .dd3 .a1:hover {background-position:-21px -97px;}
+.recommend .re-dl .dd3 .a2 {margin-top:10px; background-position:-21px -285px;}
+.recommend .re-dl .dd3 .a2:hover {background-position:-21px -303px;}
+.recommend .re-dl .dd3 cite {display:block; width:82px; overflow:hidden; font-weight:bold; line-height:24px; text-align:center; color:#f60;}
+.recommend .re-dl .dd3 cite .qx {display:inline; overflow:hidden; font-weight:normal; background:none; color:#666; text-decoration:underline;}
+.recommend .re-dl .dd3 cite .qx:hover {color:#f60; text-decoration:underline;}
+.recommend .re-dl .dd4 {width:196px; padding-right:25px;}
+.recommend .re-dl .dd4 img {float:left; width:60px; height:75px; margin-right:12px;}
+.recommend .re-dl .dd4 strong, .recommend .re-dl .dd4 span, .recommend .re-dl .dd4 cite {float:left; width:124px; height:24px; overflow:hidden; line-height:24px; white-space:nowrap; text-overflow:ellipsis;}
+.recommend .re-dl .dd5 {width:330px; padding-right:24px;}
+.recommend .re-dl .dd5 p {float:left; width:330px; overflow:hidden; line-height:24px; color:#666;}
+.recommend .re-dl .dd5 p strong {float:left; width:38px; overflow:hidden; font-weight:normal;}
+.recommend .re-dl .dd5 p span {float:left; width:292px; overflow:hidden;}
+.recommend .re-dl .dd5 p span font {font:bold 12px/22px Verdana; color:#590;}
+
+.stop {width:670px; overflow:hidden; padding:0 4px 20px; border-left:1px solid #D9E6EB; border-right:1px solid #D9E6EB;}
+.stop dl {width:670px; overflow:hidden; padding-top:20px;}
+.stop dt {width:650px; height:32px; overflow:hidden; margin-left:10px; position:relative;}
+.stop dt span {float:left; height:32px; overflow:hidden; padding:0 10px 0 18px; font:14px/23px SimSun; background:#fff url(../images/bg_points.gif) no-repeat 5px -112px; position:relative; z-index:2;}
+.stop dt span font {font-size:14px; color:#590;}
+.stop dt i {width:650px; height:0; overflow:hidden; border-top:1px solid #E4EDF1; position:absolute; left:0; top:10px; z-index:1;}
+.stop dd {float:left; width:405px; height:26px; overflow:hidden; padding:0 5px 0 28px; line-height:26px;}
+.stop dd strong {float:left; width:148px; overflow:hidden; font-weight:normal; white-space:nowrap; text-overflow:ellipsis;}
+.stop dd span {float:left; width:84px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.stop dd i {float:left; width:76px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; color:#590;}
+.stop dd i font {font-size:12px; color:#666;}
+.stop dd cite {float:right; height:30px; overflow:hidden; padding-left:12px; white-space:nowrap; background:url(../images/bg_points.gif) no-repeat -74px -28px; color:#666;}
+
+.qie {display:block; width:200px; height:31px; overflow:hidden; margin-bottom:-1px; position:relative;}
+.qie a {float:left; width:98px; height:29px; overflow:hidden; font:14px/31px SimSun; text-align:center; border:1px solid #43A2D0; color:#333;}
+.qie a:hover {background:#ECF5FB; color:#333; text-decoration:none;}
+.qie a#now5 {font-weight:bold; background:#43A2D0; color:#fff; cursor:default;}
+.qie a#now5:hover {color:#fff; text-decoration:none;}
+.chakan {width:200px; overflow:hidden; margin-bottom:-1px;}
+.chakan dt {float:left; width:187px; height:32px; overflow:hidden; padding-left:13px; line-height:33px; background:url(../images/bg_titles.jpg) no-repeat -769px -130px; color:#4087A6;cursor:default;}
+.chakan dd {float:left; width:198px; height:33px; overflow:hidden; border:1px solid #D9E6EB; border-top:none;}
+.chakan dd a {float:left; width:186px; height:32px; overflow:hidden; padding-left:12px; font:14px/33px SimSun; border-top:1px solid #FFFFFF; background:url(../images/bg_datas.png) repeat-x 0 -169px; color:#333; text-decoration:none;}
+.chakan dd a:hover, .chakan dd a#now6 {font-weight:bold; border-top-color:#F4F9FB; background:#ECF4F8; color:#07b; text-decoration:none;}
+.chakan dd a#now6 {cursor:default;}
+.chakan2 dd {width:98px;}
+.chakan2 dd.ddx {width:99px; border-left:none;}
+.chakan2 dd a {width:87px;}
+.chakan1 {width:200px; overflow:hidden; border-bottom:1px solid #d9e6eb;}
+.chakan1 h3{ float:left;width:200px; height:31px; overflow:hidden; line-height:31px; padding-left:10px; background:url(../images/h3_bg.jpg) 0 0 no-repeat; font-size:14px; color:#4087a6; font-size:14px; font-weight:normal;}
+.chakan1 .accordion dt {float:left; width:190px; height:34px; overflow:hidden; padding-left:10px; line-height:34px;background:url(../images/left.jpg) 0 0 no-repeat;  color:#4087A6;cursor:pointer; font-size:14px;_padding-left:10px;margin-right:-4px;}
+.chakan1 .accordion .dt_link{background:url(../images/left.jpg) 0 0 no-repeat; border-bottom:none;}
+.chakan1 .accordion dt a{ color:#444444;font-weight:normal; line-height:36px; display:block; width:187px; height:34px;}
+.chakan1 .accordion dt a:hover{ font-weight:normal; color:#444444;}
+.chakan1 .accordion dd {float:left; width:200px;overflow:hidden;margin-right:-4px;}
+.chakan1 .accordion dd a {float:left; width:190px; height:34px; overflow:hidden; padding-left:12px; font-size:14px; line-height:36px; background:url(../images/a_bg.jpg) 0 0 no-repeat;  color:#666; text-decoration:none;font-size:12px;}
+.chakan1 .accordion dd a:hover{text-decoration:none; color:#ff6600; font-weight:bold; background:url(../images/h_on.jpg) 0 0 no-repeat;}
+.chakan1 .accordion dd .a_n{text-decoration:none; color:#ff6600; font-weight:bold; background:url(../images/h_on.jpg) 0 0 no-repeat;}
+.accordion dt.active {background:url(../images/down.jpg) 0 0 no-repeat;font-weight:bold; border-bottom:1px solid #dde4eb;}
+.accordion dt.active a{ font-weight:bold;color:#0077bb;line-height:36px;}
+.accordion dt.active a:hover{font-weight:bold;color:#0077bb;}
+.chakan1 .accordion .dt_link a{font-weight:normal; font-weight:bold;color:#0077bb;line-height:36px;}
+.chakan1 .accordion .dt_link a:hover{font-weight:bold;color:#0077bb;}
+
+
+.jia {width:760px; overflow:hidden;}
+.jia .jia-top {display:block; width:730px; height:36px; overflow:hidden; padding-left:30px; background:url(../images/bg_titles.jpg) no-repeat 0 -130px;}
+.jia .jia-top h2 {float:left; font:bold 14px/37px SimSun; padding-right:9px;}
+.jia .jia-top cite {float:left; font:bold 14px/37px SimSun;}
+.jia .jia-top form {float:right;}
+.jia .jia-top .tit {float:left; width:170px; height:25px; margin:6px 8px 0 0; padding:0 7px 0 25px; line-height:25px; border:none; background:url(../images/bg_some.png) no-repeat -187px -192px;}
+.jia .jia-top .btn {float:left; width:71px; height:25px; margin:6px 18px 0 0; font:bold 12px/25px SimSun; border:none; background:url(../images/bg_points.gif) no-repeat 0 -36px; color:#fff; cursor:pointer;}
+.jia .jia-top .btnover {background-position:0 -61px;}
+
+.tops {width:770px; overflow:hidden; margin-left:-10px;}
+.tops dl {float:left; width:365px; height:369px; overflow:hidden; padding:0 4px; margin:0 0 10px 10px; display:inline; border:1px solid #D9E6EB; background:url(../images/bg_points.gif) no-repeat 10px -460px;}
+.tops dt {float:left; width:343px; height:30px; overflow:hidden; margin-left:-4px; _margin-left:-2px; padding-left:30px; font:bold 14px/30px SimSun; background:url(../images/bg_titles.jpg) no-repeat -1px -167px;}
+.tops dd {float:left; width:324px; height:34px; overflow:hidden; padding:0 10px 0 31px; background:url(../images/bg_line_x.gif) no-repeat left bottom;}
+.tops dd span {float:left; width:250px; height:34px; overflow:hidden; line-height:38px; white-space:nowrap; text-overflow:ellipsis;}
+.tops dd .yu {float:right; width:53px; height:18px; margin-top:8px; background:url(../images/bg_points.gif) no-repeat;}
+.tops dd .yu:hover {background-position:0 -18px;}
+.tops2 dd span a {font-size:14px;}
+.tops2 dd span cite {margin-left:8px; color:#666; position:relative; top:-1px;}
+
+.pick {width:966px; overflow:hidden; padding:1px; margin-top:10px; border:1px solid #FCCC66;}
+.picks {width:960px; overflow:hidden; padding:3px; background:#FFF6E1;}
+.picks .pick-top {width:960px; height:28px; overflow:hidden; padding-top:3px;}
+.picks .pick-top cite {float:left; overflow:hidden; padding-left:17px; line-height:22px; color:#666;}
+.picks .pick-top span {float:left; height:20px; overflow:hidden; margin-right:5px; padding:0 28px 0 8px; line-height:21px; border:1px solid #fb0; background:#fff; position:relative;}
+.picks .pick-top span font {font-size:12px; color:#f60;}
+.picks .pick-top span a {display:block; width:14px; height:14px; overflow:hidden; background:url(../images/bg_other.gif) no-repeat -74px -285px; position:absolute; right:8px; top:3px;}
+.picks .pick-top span a:hover {background-position:-74px -303px;}
+.picks .pick-con {width:948px; overflow:hidden; padding:0 6px; background:#fff;}
+.picks .pick-con .quan {display:block; width:948px; height:32px; overflow:hidden; padding-top:10px; background:url(../images/bg_line_x.gif) no-repeat left bottom;}
+.picks .pick-con .quan cite {float:left; overflow:hidden; padding-left:11px; line-height:22px; color:#666;}
+.picks .pick-con .quan .tit {float:left; width:140px; height:20px; overflow:hidden; padding:0 5px; line-height:20px; border:1px solid #D6D6D6;}
+.picks .pick-con .quan .btn {float:left; width:38px; height:21px; margin-left:6px; border:none; background:url(../images/bg_other.gif) no-repeat -75px -206px; cursor:pointer;}
+.picks .pick-con .quan .btn:hover {background-position:-115px -256px;}
+.picks .pick-con .quan a {float:right; margin-right:10px; line-height:22px;}
+.picks .pick-con .pick-dl {width:948px; overflow:hidden; padding:10px 0; border-bottom:1px solid #E5E5E5;}
+.picks .pick-con .pick-dl dl {float:left; width:474px; height:44px; overflow:hidden;}
+.picks .pick-con .pick-dl dt {float:left; width:100px; height:44px; overflow:hidden; padding-right:6px; text-align:right; color:#ccc; line-height:22px;}
+.picks .pick-con .pick-dl dt a {font-weight:bold; color:#333; text-decoration:none;}
+.picks .pick-con .pick-dl dt a:hover {color:#f60; text-decoration:underline;}
+.picks .pick-con .pick-dl dd {float:left; width:92px; height:22px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.picks .pick-con .pick-dl dd a {float:left; height:22px; overflow:hidden; padding:0 5px; line-height:22px; color:#666; text-decoration:none;}
+.picks .pick-con .pick-dl dd a:hover {color:#fff; text-decoration:none; background:#43A2D0;}
+.picks .pick-con .pick-dl dd a.gd {color:#333;}
+.picks .pick-con .pick-dl dd a.gd:hover {color:#f60; text-decoration:underline; background:none;}
+.picks .pick-con .pick-dl dd a.now, .picks .pick-con .pick-dl dd a.now:hover {color:#fff; text-decoration:none; background:#43A2D0; cursor:default;}
+.picks .pick-con .pick-dl .shut, .picks .pick-con .pick-dl .open {width:948px; height:auto; overflow:hidden;}
+.picks .pick-con .pick-dl .pick-dls {float:left; width:948px; height:130px; overflow:hidden;}
+.picks .pick-con .pick-dl .open .pick-dls {height:auto;}
+.picks .pick-con .pick-dl .show_dl {float:left; width:936px; height:17px; overflow:hidden; padding:10px 12px 0 0;}
+.picks .pick-con .pick-dl .show_dl a {float:right; width:45px; height:17px; overflow:hidden; background:url(../images/bg_points.gif) no-repeat 0 -408px;}
+.picks .pick-con .pick-dl .open .show_dl a {background-position:0 -424px;}
+.picks .pick-con .pick-dl2 {border:none;}
+.picks .pick-con .pick-dl2 dl {width:930px;}
+.picks .pick-con .pick-dl2 dt {height:44px;}
+.picks .pick-con .pick-dl2 dt a, .picks .pick-con .pick-dl2 dt a:hover {color:#333; text-decoration:none; cursor:default;}
+.picks .pick-con .pick-dl2 dd {width:auto; margin-right:8px;}
+.picks .pick-con .pick-dl3 dl, .picks .pick-con .pick-dl3 dt {height:22px;}
+.picks .pick-con .pick-dl4 dl {width:930px;height:auto; line-height:22px;}
+.picks .pick-con .pick-dl4 dt {height:44px;}
+.picks .pick-con .pick-dl4 dt a, .picks .pick-con .pick-dl4 dt a:hover {color:#333; text-decoration:none; cursor:default;}
+.picks .pick-con .pick-dl4 dd {width:auto; margin-right:8px;}
+.picks .pick-con .pick-dl5 dl {width:930px;height:auto; line-height:22px;}
+.picks .pick-con .pick-dl5 dt {height:auto;}
+.picks .pick-con .pick-dl5 dt a, .picks .pick-con .pick-dl5 dt a:hover {color:#333; text-decoration:none; cursor:default;}
+.picks .pick-con .pick-dl5 dd {width:auto; margin-right:8px;}
+.picks .pick-con .pick-dl-nobline {border:none;}
+.picks .pick-con .pick-dl ul {width:942px; overflow:hidden; padding-left:6px;}
+.picks .pick-con .pick-dl ul li {float:left; width:117px; height:22px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.picks .pick-con .pick-dl ul li a {float:left; height:22px; overflow:hidden; padding:0 5px; line-height:22px; color:#666; text-decoration:none;}
+.picks .pick-con .pick-dl ul li a:hover {color:#fff; text-decoration:none; background:#43A2D0;}
+.picks .pick-con .pick-dl ol {float:left; width:770px; overflow:hidden; padding:6px; margin:5px 0 0 106px; _margin-left:53px; border:1px solid #C4D8E1; background:#F6F9FA;}
+.picks .pick-con .pick-dl ol li {float:left; height:22px; margin-right:8px; white-space:nowrap;}
+.picks .pick-con .pick-dl ol li a {float:left; height:22px; padding:0 5px; line-height:22px; color:#666; text-decoration:none;}
+.picks .pick-con .pick-dl ol li a:hover {color:#fff; text-decoration:none; background:#43A2D0;}
+.picks .pick-con .pick-dl ol li a.now, .picks .pick-con .pick-dl ol li a.now:hover {color:#fff; text-decoration:none; background:#43A2D0; cursor:default;}
+.picks2 {width:960px; overflow:hidden; padding:4px 4px 20px; margin-bottom:20px; background:#fff; border:1px solid #DBE8EC; border-top:none;}
+.picks2 .pick-con .pick-dl {border-bottom:none;}
+.picks2 .pick-con .no-pick {display:block; width:930px; overflow:hidden; padding:20px 0 0 18px; line-height:22px;}
+.picks2 .pick-con p {display:block; width:930px; overflow:hidden; padding:6px 0 0 18px; line-height:22px; color:#666;}
+
+.sou-title {display:block; width:970px; height:36px; overflow:hidden; margin-top:10px; background:url(../images/bg_titles.jpg) no-repeat 0 -228px;}
+.sou-title strong {float:left; padding-left:32px; font:bold 14px/38px SimSun;}
+.sou-title .gd {float:right; margin:12px 14px 0;}
+.sou-title cite {float:right; margin-right:10px; font:12px/38px SimSun; color:#666;}
+
+.recom {width:970px; overflow:hidden; padding-bottom:20px;}
+.recom2{ padding-bottom:0;margin-bottom:0;}
+.recom .re-top {display:block; width:970px; height:28px; overflow:hidden; margin-top:10px; border-bottom:2px solid #43A2D0;}
+.recom .re-top a {float:left; height:27px; overflow:hidden; padding:0 10px 0 10px; line-height:30px; border:1px solid #43A2D0; border-bottom:none; color:#333; text-decoration:none;}
+.recom .re-top a font {font-size:12px; color:#f60;}
+.recom .re-top a:hover {color:#f60;}
+.recom .re-top a.now, .recom .re-top a.now:hover {background:#43A2D0; color:#fff; cursor:default;}
+.recom .re-top a.now span {font-weight:bold;}
+.recom .re-top a.now font {color:#fff;}
+.recom .re-con {width:958px; overflow:hidden; padding:5px 5px 30px; border:1px solid #D9E6EB; border-top:none;}
+.recom .re-con .res {width:958px; overflow:hidden;}
+.recom .re-con .res li {float:left; width:938px; height:106px; overflow:hidden; padding:14px 10px 0; background:url(../images/bg_line_x.gif) no-repeat left bottom;position:relative;}
+.recom .re-con .res li.li3 {background-color:#F6F9FA;}
+.recom .re-con .res .res-left {float:left; width:600px; overflow:hidden;}
+.recom .re-con .res .res-left img {float:left; width:120px; height:90px; margin-right:10px;}
+.recom .re-con .res .res-left strong {float:left; width:470px; height:20px; line-height:14px; overflow:hidden;zoom:1; padding-top:1px; font-weight:normal; white-space:nowrap; text-overflow:ellipsis; color:#666;}
+.recom .re-con .res .res-left strong a {margin-right:10px; font-weight:bold; float:left;}
+.recom .re-con .res .res-left strong cite{ color:#333;float:left; margin-right:10px;}
+.recom .re-con .res .res-left strong cite a{ color:#f60; margin:0; font-weight:normal; float:none;}
+.recom .re-con .res .res-left strong em{ float:left; background:url(../images/tuijian_ico.gif) no-repeat 0 -98px; width:13px; height:14px; line-height:14px; font-size:1px; margin-right:7px;}
+.recom .re-con .res .res-left strong em.ico_ren{ background-position:0 -98px;}
+.recom .re-con .res .res-left strong em.ico_ming{ background-position:-16px -98px;}
+.recom .re-con .res2 .res-left strong em{ float:none; background:url(../images/tuijian_ico.gif) no-repeat 0 -98px; width:13px; height:14px; line-height:14px; font-size:1px; margin-right:7px; display:inline-block; position:relative; top:3px;}
+.recom .re-con .res .res-left p a.news_link{ color:#333;}
+.recom .re-con .res .res-left p a.news_link:hover{ color:#f60;}
+.recom .re-con .res .res-left p {float:left; width:470px; height:24px; overflow:hidden; line-height:24px; white-space:nowrap; text-overflow:ellipsis;}
+.recom .re-con .res .res-left p b {font-weight:bold;}
+.recom .re-con .res .res-left span {float:left; width:470px; height:26px; overflow:hidden; line-height:26px;}
+.recom .re-con .res .res-left span a {float:left; color:#666; text-decoration:none;}
+.recom .re-con .res .res-left span a.first {color:#07b;}
+.recom .re-con .res .res-left span a:hover {color:#f60; text-decoration:underline;}
+.recom .re-con .res .res-left span i {float:left; padding:0 10px 0 9px; color:#ccc;}
+.recom .re-con .res .res-right {float:right; width:315px; overflow:hidden;}
+.recom .re-con .res .res-right span {float:left; width:315px; height:23px; overflow:hidden;}
+.recom .re-con .res .res-right span b {float:left; width:67px; height:23px; overflow:hidden; line-height:19px; text-align:center; background:url(../images/bg_other.gif) no-repeat -130px -50px;}
+.recom .re-con .res .res-right p {float:left; width:306px; overflow:hidden; padding-left:9px; line-height:24px;}
+.recom .re-con .res .res-right p a {display:inline-block; margin-right:6px; white-space:nowrap;}
+.recom .re-con .res .res-right p i {color:#666; white-space:nowrap;}
+.recom .re-con .res .res-right p i a {margin:0;}
+.recom .re-con .pages {padding-left:1px;}
+.recom .re-con .res2 li {height:136px;}
+.recom .re-con .res2 .res-left img {width:90px; height:120px; margin-right:20px;}
+.recom .re-con .res2 .res-left strong, .recom .re-con .res2 .res-left p, .recom .re-con .res2 .res-left span {width:490px;}
+.recom .re-con .res2 .res-right p {height:auto;}
+.recom .re-con .res2 .res-right p a {margin:0;}
+.recom .re-con .res2 .res-left strong{ vertical-align:bottom;height:24px; line-height:24px;}
+.recom .re-con .res2 .res-left strong a {float:none;}
+.recom .re-con .res2 .res-left strong cite{float:none; margin-right:10px;}
+.recom .re-con .res li#res-tj{ background-color:#fffbf0;}
+.recom .re-con .res li .ico_tj{ position:absolute; background:url(../images/tuijian_ico.gif) no-repeat 0 -51px; width:31px; height:40px; left:6px; top:10px; display:none;}
+.recom .re-con .res li#res-tj .ico_tj{ display:block;}
+.recom .re-none{ overflow:hidden;zoom:1; padding:15px 5px; border:1px solid #D9E6EB; border-top:none;border-bottom:none; background:#fafbfd;}
+.recom .re-none strong,.recom .re-none p{ display:block; float:none; padding:0 100px 0 350px; line-height:24px; color:#666;}
+.recom .re-none strong{ color:#333; font-size:18px; font-family:"Î¢ÈíÑÅºÚ"; font-weight:500; line-height:36px;}
+.recom .re-tittj{ border-left:1px solid #D9E6EB;border-right:1px solid #D9E6EB; background:url(../images/textbg.gif) repeat-x 0 -77px; height:35px; line-height:36px; font-weight:bold; color:#666; padding:0 10px;}
+.recom .re-con .show-more{ padding:20px 0 0 0; text-align:center; font-size:14px; font-weight:bold;}
+.recom .re-con .show-more a{ color:#f60;}
+
+.my_left {float:left; width:570px; height:320px; overflow:hidden; margin-top:10px; background:url(../images/bg_chaxun.jpg) no-repeat;}
+.my_right {float:right; width:390px; height:320px; overflow:hidden; margin-top:10px;}
+.my_right .lg_bt {display:block; width:390px; height:30px; overflow:hidden; background:url(../images/bg_titles.jpg) no-repeat -560px -69px;}
+.my_right .lg_bt h3 {float:left; font:bold 14px/32px SimSun; margin-left:12px; display:inline;}
+.my_right .lg_bt cite {float:right; height:30px; overflow:hidden; margin-right:10px; line-height:32px; color:#999;}
+.my_right .lg_cons {width:388px; height:289px; overflow:hidden; border:1px solid #DAE7EC; border-top:none;}
+.my_right .lg_cons form {width:388px; height:289px; overflow:hidden; padding-top:9px;}
+.my_right .lg_cons form .fline {float:left; width:388px; margin-top:9px; position:relative;}
+.my_right .lg_cons form .fline1 {z-index:5;}
+.my_right .lg_cons form .fline2 {z-index:4;}
+.my_right .lg_cons form .fline3 {z-index:3;}
+.my_right .lg_cons form .fline4 {z-index:2;}
+.my_right .lg_cons form .fline5 {z-index:1;}
+.my_right .lg_cons form .fl {float:left; width:112px; overflow:hidden; font:14px/28px SimSun; text-align:right;}
+.my_right .lg_cons form .fr {float:left; width:276px; position:relative;}
+.my_right .lg_cons form .fr input {float:left; width:210px; height:26px; padding:0 5px; border:1px solid #BEBEBE; font:14px/26px SimSun;}
+.my_right .lg_cons form i {float:left; width:12px; height:12px; overflow:hidden; margin:7px 0 0 5px; background:url(../images/bg_points.gif) no-repeat 0 -1000px;}
+.my_right .lg_cons form cite {display:block; width:190px; height:24px; overflow:hidden; padding:0 5px 0 25px; font:12px/26px SimSun; border:1px solid #FF8080; background:#FFF2F2 url(../images/bg_points.gif) no-repeat 7px -954px; color:#f20; position:absolute; left:0; top:27px; z-index:20;}
+.my_right .lg_cons form img {float:left; width:150px; height:40px; margin-top:6px;}
+.my_right .lg_cons form a {float:left; margin:18px 0 0 10px; text-decoration:underline;}
+.my_right .lg_cons form .chaxun {float:left; width:388px; height:25px; overflow:hidden; padding-top:26px; text-align:center;}
+.my_right .lg_cons form .chaxun input {width:71px; height:25px; border:none; background:url(../images/bg_step_btn.png) no-repeat -71px -25px; cursor:pointer;}
+.my_right .lg_cons form .chaxun .cx_hover {background-position:-71px 0;}
+
+.fankui {width:930px; overflow:hidden; padding:0 19px 40px; border:1px solid #DDE6EB; border-top:none;}
+.fankui .fk_title {float:left; width:930px; height:20px; overflow:hidden; margin-top:25px;}
+.fankui .fk_shu {float:left; width:930px; margin-top:10px;}
+.fankui .fk_shu textarea {float:left; width:648px; height:240px; overflow:hidden; overflow-y:auto; padding:4px 4px 4px 12px; font:12px/20px SimSun; border:1px solid #E3E3E3; resize:none;}
+.fankui .fk_shu cite {float:left; margin-top:226px; padding-left:25px; font:12px/24px SimSun; background:url(../images/bg_points.gif) no-repeat 7px -954px; color:#f20;}
+.fankui .fk_shu input {float:left; width:226px; height:24px; padding:0 12px; font:12px/24px SimSun; border:1px solid #E3E3E3;}
+.fankui .fk_shu i {float:left; height:24px; padding:1px 12px;font:12px/24px SimSun; color:#666;}
+.fankui .fk_tj {float:left; width:930px; margin-top:46px; text-align:center;}
+.fankui .fk_tj input {width:94px; height:29px; border:none; background:url(../images/bg_step_btn.png) no-repeat 0 -153px; cursor:pointer;}
+.fankui .fk_tj .fk_tj_hover {background-position:0 -124px;}
+
+/* 2013 */
+.expert dl dd{ width:156px;}
+.dc_des{width:666px; overflow:hidden; padding:10px 6px 20px; border:1px solid #D9E6EB; border-top:none;}
+.dc_des p{ line-height:26px; font-size:14px; padding:6px 12px; text-indent:2em;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

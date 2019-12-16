@@ -1,0 +1,26 @@
+.art_weixin{ float:left; margin:1px 0 0 5px; *margin:0;}
+.art_weixin em{ background:url(../images/weixin_logo.png) no-repeat; width:52px; height:18px; float:left;cursor:pointer; font-style:normal;}
+.art_weixin .art_weixin_ewm{ position:absolute; width:140px; overflow:hidden; margin:18px 0 0 0;*margin:18px 0 0 -52px; display:none; z-index:5;}
+.art_weixin .art_weixin_ewm .ewm_bg{ position:absolute; left:0; top:0; z-index:1; width:140px; height:600px; background:#cacaca;filter: alpha(opacity=25);-moz-opacity: 0.25;-khtml-opacity: 0.25;opacity: 0.25;}
+.art_weixin .art_weixin_ewm .ewm_box{ position:relative; z-index:2; padding:4px; display:block;}
+.art_weixin .art_weixin_ewm .ewm_box cite{ display:block; height:23px; background:#f2f2f2; padding:0 3px; font-size:12px; color:#666; line-height:20px; overflow:hidden;zoom:1;font-style:normal;}
+.art_weixin .art_weixin_ewm .ewm_box cite i{ float:right; background:url(../images/weixin_close.png) no-repeat; width:10px; height:10px; line-height:10px; font-size:1px; margin:5px 0 0 0; cursor:pointer;}
+.art_weixin .art_weixin_ewm .ewm_box p{ background:#fff; border:solid 1px #dfdfdf; padding:5px 0 10px 0;}
+.art_weixin .art_weixin_ewm .ewm_box p .ewm_img{ display:block; width:120px; height:120px; margin:0 auto; background:url(../images/ewm_load.gif) no-repeat center 30px;}
+.art_weixin .art_weixin_ewm .ewm_box p .ewm_img img{width:120px; height:120px;}
+.art_weixin .art_weixin_ewm .ewm_box p .ewm_text{ display:block; text-align:center; color:#666; font-size:12px; line-height:20px;}
+.art_weixin_hover em{filter: alpha(opacity=75);-moz-opacity: 0.75;-khtml-opacity: 0.75;opacity: 0.75;}
+.art_weixin_hover .art_weixin_ewm{ display:block;}
+
+/*??????? ???*/
+.con_left .art_fun .sharebox{ width:auto;}
+.con_left .art_fun .art_weixin{ float:left; margin:2px 0 0 0;}
+.con_left .art_fun .art_weixin em{ background:url(../images/weixin_logo2.png) no-repeat; width:47px; height:16px;}
+.con_left .art_fun .art_weixin .art_weixin_ewm{ margin:16px 0 0 0;*margin:16px 0 0 -47px;}
+.con_left .art_fun .sharebox .bshareDiv div{ *margin-top:2px;}
+
+/*????????? ???*/
+.art-extend .art_weixin{ position:absolute; margin:-24px 0 0 487px;_margin:-26px 0 0 492px;}
+.art-extend .art_weixin em{ background:url(../images/weixin_logo3.png) no-repeat 0 0; width:52px; height:16px;}
+.art-extend .art_weixin_hover em{filter: alpha(opacity=100);-moz-opacity: 1;-khtml-opacity: 1;opacity: 1; background-position:0 -16px;}
+.art-extend .art_weixin .art_weixin_ewm{ margin:16px 0 0 0;*margin:16px 0 0 -52px;}

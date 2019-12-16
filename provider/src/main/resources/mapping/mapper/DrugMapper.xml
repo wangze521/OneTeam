@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.mapper.DrugMapper" >
+   <!--药品信息维护-->
+    <select id="queryDrugLimit" resultType="long">
+       select count(*) from druginfo
+    </select>
+    <select id="queryDrugInfo" resultType="com.jk.model.DrugInfo">
+       select * from druginfo
+       limit #{start},#{limit}
+    </select>
+    <!--入库管理-->
+    <select id="queryStorageLimit" resultType="long">
+       select count(*) from storage
+    </select>
+    <select id="queryStorage" resultType="com.jk.model.Storage">
+       select * from storage
+       limit #{start},#{limit}
+    </select>
+    <!--出库管理-->
+    <select id="queryRemovalLimit" resultType="long">
+       select count(*) from removal
+    </select>
+    <select id="queryRemoval" resultType="com.jk.model.Removal">
+       select * from removal
+       limit #{start},#{limit}
+    </select>
+    <!--库存管理-->
+    <select id="queryRepertoryLimit" resultType="long">
+       select count(*) from repertory
+    </select>
+    <select id="queryRepertory" resultType="com.jk.model.Repertory">
+       select * from repertory
+       limit #{start},#{limit}
+    </select>
+    <!--入库-->
+    <select id="querylimit" resultType="long">
+       select count(*) from warehousing
+    </select>
+    <select id="queryWarehousing" resultType="com.jk.model.Warehousing">
+       select * from warehousing
+       limit #{start},#{limit}
+    </select>
+    <!--出库-->
+    <select id="queryExlimit" resultType="long">
+       select count(*) from exwarehouse
+    </select>
+    <select id="queryExWarehouse" resultType="com.jk.model.ExWarehouse">
+       select * from exwarehouse
+       limit #{start},#{limit}
+    </select>
+
+    <!--药品信息维护 业务 -->
+   <update id="disableDrug">
+      update druginfo set  status=2
+      where drugId=#{drugId}
+    </update>
+    <update id="enabledDrug">
+      update druginfo set  status=1
+      where drugId=#{drugId}
+    </update>
+    <!--入库管理业务-->
+    <select id="findStorageById" resultType="com.jk.model.Storage">
+    select * from storage
+    where storageId=#{storageId}
+    </select>
+
+
+  <!--<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from drug
+    where drugid = #{drugid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from drug
+    where drugid = #{drugid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jk.model.Drug" >
+    insert into drug (drugid, seat, oddnum, 
+      drugname, specification, manufacturer, 
+      batch, 
+supplier, 
+purchaseprice, 
+      quantity, purchasecost, warehousepersonnel, 
+      warehouseentrytime, verifier, dateofapproval
+      )
+    values (#{drugid,jdbcType=INTEGER}, #{seat,jdbcType=VARCHAR}, #{oddnum,jdbcType=INTEGER}, 
+      #{drugname,jdbcType=VARCHAR}, #{specification,jdbcType=VARCHAR}, #{manufacturer,jdbcType=VARCHAR}, 
+      #{batch,jdbcType=VARCHAR}, #{
+supplier,jdbcType=VARCHAR}, #{
+purchaseprice,jdbcType=DOUBLE}, 
+      #{quantity,jdbcType=VARCHAR}, #{purchasecost,jdbcType=VARCHAR}, #{warehousepersonnel,jdbcType=VARCHAR}, 
+      #{warehouseentrytime,jdbcType=VARCHAR}, #{verifier,jdbcType=VARCHAR}, #{dateofapproval,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.jk.model.Drug" >
+    insert into drug
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="drugid != null" >
+        drugid,
+      </if>
+      <if test="seat != null" >
+        seat,
+      </if>
+      <if test="oddnum != null" >
+        oddnum,
+      </if>
+      <if test="drugname != null" >
+        drugname,
+      </if>
+      <if test="specification != null" >
+        specification,
+      </if>
+      <if test="manufacturer != null" >
+        manufacturer,
+      </if>
+      <if test="batch != null" >
+        batch,
+      </if>
+      <if test="
+supplier != null" >
+        
+supplier,
+      </if>
+      <if test="
+purchaseprice != null" >
+        
+purchaseprice,
+      </if>
+      <if test="quantity != null" >
+        quantity,
+      </if>
+      <if test="purchasecost != null" >
+        purchasecost,
+      </if>
+      <if test="warehousepersonnel != null" >
+        warehousepersonnel,
+      </if>
+      <if test="warehouseentrytime != null" >
+        warehouseentrytime,
+      </if>
+      <if test="verifier != null" >
+        verifier,
+      </if>
+      <if test="dateofapproval != null" >
+        dateofapproval,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="drugid != null" >
+        #{drugid,jdbcType=INTEGER},
+      </if>
+      <if test="seat != null" >
+        #{seat,jdbcType=VARCHAR},
+      </if>
+      <if test="oddnum != null" >
+        #{oddnum,jdbcType=INTEGER},
+      </if>
+      <if test="drugname != null" >
+        #{drugname,jdbcType=VARCHAR},
+      </if>
+      <if test="specification != null" >
+        #{specification,jdbcType=VARCHAR},
+      </if>
+      <if test="manufacturer != null" >
+        #{manufacturer,jdbcType=VARCHAR},
+      </if>
+      <if test="batch != null" >
+        #{batch,jdbcType=VARCHAR},
+      </if>
+      <if test="
+supplier != null" >
+        #{
+supplier,jdbcType=VARCHAR},
+      </if>
+      <if test="
+purchaseprice != null" >
+        #{
+purchaseprice,jdbcType=DOUBLE},
+      </if>
+      <if test="quantity != null" >
+        #{quantity,jdbcType=VARCHAR},
+      </if>
+      <if test="purchasecost != null" >
+        #{purchasecost,jdbcType=VARCHAR},
+      </if>
+      <if test="warehousepersonnel != null" >
+        #{warehousepersonnel,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseentrytime != null" >
+        #{warehouseentrytime,jdbcType=VARCHAR},
+      </if>
+      <if test="verifier != null" >
+        #{verifier,jdbcType=VARCHAR},
+      </if>
+      <if test="dateofapproval != null" >
+        #{dateofapproval,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jk.model.Drug" >
+    update drug
+    <set >
+      <if test="seat != null" >
+        seat = #{seat,jdbcType=VARCHAR},
+      </if>
+      <if test="oddnum != null" >
+        oddnum = #{oddnum,jdbcType=INTEGER},
+      </if>
+      <if test="drugname != null" >
+        drugname = #{drugname,jdbcType=VARCHAR},
+      </if>
+      <if test="specification != null" >
+        specification = #{specification,jdbcType=VARCHAR},
+      </if>
+      <if test="manufacturer != null" >
+        manufacturer = #{manufacturer,jdbcType=VARCHAR},
+      </if>
+      <if test="batch != null" >
+        batch = #{batch,jdbcType=VARCHAR},
+      </if>
+      <if test="
+supplier != null" >
+        
+supplier = #{
+supplier,jdbcType=VARCHAR},
+      </if>
+      <if test="
+purchaseprice != null" >
+        
+purchaseprice = #{
+purchaseprice,jdbcType=DOUBLE},
+      </if>
+      <if test="quantity != null" >
+        quantity = #{quantity,jdbcType=VARCHAR},
+      </if>
+      <if test="purchasecost != null" >
+        purchasecost = #{purchasecost,jdbcType=VARCHAR},
+      </if>
+      <if test="warehousepersonnel != null" >
+        warehousepersonnel = #{warehousepersonnel,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseentrytime != null" >
+        warehouseentrytime = #{warehouseentrytime,jdbcType=VARCHAR},
+      </if>
+      <if test="verifier != null" >
+        verifier = #{verifier,jdbcType=VARCHAR},
+      </if>
+      <if test="dateofapproval != null" >
+        dateofapproval = #{dateofapproval,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where drugid = #{drugid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jk.model.Drug" >
+    update drug
+    set seat = #{seat,jdbcType=VARCHAR},
+      oddnum = #{oddnum,jdbcType=INTEGER},
+      drugname = #{drugname,jdbcType=VARCHAR},
+      specification = #{specification,jdbcType=VARCHAR},
+      manufacturer = #{manufacturer,jdbcType=VARCHAR},
+      batch = #{batch,jdbcType=VARCHAR},
+      
+supplier = #{
+supplier,jdbcType=VARCHAR},
+      
+purchaseprice = #{
+purchaseprice,jdbcType=DOUBLE},
+      quantity = #{quantity,jdbcType=VARCHAR},
+      purchasecost = #{purchasecost,jdbcType=VARCHAR},
+      warehousepersonnel = #{warehousepersonnel,jdbcType=VARCHAR},
+      warehouseentrytime = #{warehouseentrytime,jdbcType=VARCHAR},
+      verifier = #{verifier,jdbcType=VARCHAR},
+      dateofapproval = #{dateofapproval,jdbcType=VARCHAR}
+    where drugid = #{drugid,jdbcType=INTEGER}
+  </update>-->
+</mapper>

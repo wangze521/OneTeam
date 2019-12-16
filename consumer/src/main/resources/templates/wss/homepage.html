@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../layui/jquery.min.js"></script>
+    <script src="../layui/echarts/echarts.min.js"></script>
+    <script src="../layui/echarts/macarons.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.js"></script>
+</head>
+<body>
+<!--外层大面板-->
+<div style="padding: 20px; background-color: #F2F2F2;">
+    <div class="layui-row layui-col-space3" style="height: 900px">
+            <div class="layui-card" style="height: 900px;background:#fbfbfb;">
+                <div class="layui-card-body">
+
+             <!--小面板-->
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-md4">
+                                <div class="layui-card">
+                                    <div class="layui-card-header">今日挂号人次
+                                        <div style="margin-left: 340px"> <i class="layui-icon layui-icon-tabs" style="font-size: 30px; color: #93D1FF;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="layui-card-body">
+                                       <span id="s"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <div class="layui-card">
+                                    <div class="layui-card-header">今日接诊人次
+                                        <div style="margin-left: 340px"> <i class="layui-icon layui-icon-friends" style="font-size: 30px; color: #93D1FF;"></i>
+                                        </div></div>
+                                    <div class="layui-card-body">
+                             <span id="reception"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <div class="layui-card">
+                                    <div class="layui-card-header">今日收入合计
+                                        <div style="margin-left: 340px"> <i class="layui-icon layui-icon-rmb" style="font-size: 30px; color: #93D1FF;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="layui-card-body">
+                                        <span id="income"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md12">
+                                <div class="layui-card" style="width: 1230px;height:460px">
+                                    <div class="layui-card-header">诊所收入趋势</div>
+                                    <div class="layui-card-body">
+                           <div id="main" style="width: 1200px;height:400px;"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md12">
+                                <div class="layui-card" style="width: 1230px;height:300px">
+                                    <div class="layui-card-header">今日门诊记录</div>
+                                    <div class="layui-card-body">
+                                        <table class="layui-table" id="outpatient" lay-even lay-skin="nob">
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            <!--小面板end-->
+
+
+                 </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    layui.use(['form','layer','jquery','laydate','table'], function(){
+        var table = layui.table;
+        /*var btn = document.getElementById("a")*/
+        var layer = layui.layer
+        var form = layui.form;
+        var laydate = layui.laydate;
+
+        table.render({
+
+            elem: '#outpatient'
+            ,url:'../home/outpatient'
+            ,limit:3
+            ,limits:[3,6,9,12]
+            ,cols: [
+                [
+                     {field:'id', width:'10%', title: 'ID'}
+                    ,{field:'status', width:'10%', title: '状态',
+                    templet:function(value,row,index){
+                      if(value.status==1){
+                          return "待接诊";
+                      }
+                        if(value.status==2){
+                            return "接诊中";
+                        }
+                        if(value.status==3){
+                            return "已接诊";
+                        }
+                    }}
+                    ,{field:'number', width:'10%', title: '编号'}
+                    ,{field:'name', width:'10%', title: '名字'}
+                    ,{field:'age', width:'10%', title: '年龄'}
+                    ,{field:'phone', width:'10%', title: '电话'}
+                    ,{field:'type', width:'10%', title: '门诊类型',
+                    templet:function(value,row,index){
+                        if(value.type==1){
+                            return "初诊";
+                        }
+                        if(value.type==2){
+                            return "复诊";
+                        }
+                    }}
+                    ,{field:'kename', width:'10%', title: '科室'}
+                    ,{field:'jobname', width:'10%', title: '挂号医生'}
+                    ,{field:'date',width:'10%',title: '时间  '}
+
+                ]
+            ]
+            ,page: true
+
+        })
+
+
+    })
+</script>
+
+
+
+
+
+
+
+<script>
+
+    $(document).ready(function(){
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        //数据加载完之前先显示一段简单的loading动画
+        myChart.showLoading();
+        var names=[];    //横坐标数组（实际用来盛放X轴坐标值）
+        var values=[];    //纵坐标数组（实际用来盛放Y坐标值）
+        $.ajax({
+            type : "post",
+            async : true,            //异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行）
+            url : "../home/EcharsShow",    //请求发送到dataActiont处
+            data : {},
+            dataType : "json",        //返回数据形式为json
+            success : function(result) {
+                //请求成功时执行该函数内容，result即为服务器返回的json对象
+                if (result) {
+                    for(var i=0;i<result.length;i++){
+                        names.push(result[i].date);
+                        values.push(result[i].count);
+                    }
+                    myChart.hideLoading();    //隐藏加载动画
+                    myChart.setOption({        //加载数据图表
+                        tooltip: {},
+                        legend: {
+
+                        },
+                        xAxis: {
+                            data: names,
+                            axisLine: {
+                                lineStyle: {
+                                    // 设置y轴颜色
+                                    color: '#483D8B'
+                                }
+                            },
+
+                        },
+                        yAxis: {
+                            type: 'value',
+                            axisLine: {
+                                lineStyle: {
+                                    // 设置x轴颜色
+                                    color: '#483D8B'
+                                }
+                            },
+                        },
+                        series: [{
+                            areaStyle: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                    offset: 0,
+                                    color: 'rgb(255, 158, 68)'
+                                }, {
+                                    offset: 1,
+                                    color: 'rgb(255, 70, 131)'
+                                }]),
+                            },
+                            // 根据名字对应到相应的系列
+                            type: 'line',
+                            data: values,
+
+                            itemStyle: {
+                                normal: {
+                                    // 拐点上显示数值
+                                    label : {
+                                        show: true
+                                    },
+                                    lineStyle:{
+                                        type:'solid',  //'dotted'虚线 'solid'实线
+                                        // 使用rgba设置折线透明度为0，可以视觉上隐藏折线
+                                        color: '#EE0000',
+                                        /*  */
+                                        width:5,  // 设置线宽
+
+                                    }
+                                }
+                            }
+
+                        }]
+
+                    });
+                }
+            },
+            error : function(errorMsg) {
+                //请求失败时执行该函数
+                alert("图表请求数据失败!");
+                myChart.hideLoading();
+            }
+        });//end ajax
+    });
+
+</script>
+<script>
+
+    $(function () {
+        query();
+        Reception();
+        income();
+    })
+
+    query = function () {
+        $.ajax({
+            url:'../home/query',
+            success:function (data) {
+                $("#s").html(data)
+            }
+
+        })
+    }
+
+    Reception = function () {
+        $.ajax({
+            url:'../home/Reception',
+            success:function (data) {
+                $("#reception").html(data)
+            }
+
+        })
+    }
+
+
+    income = function () {
+        $.ajax({
+            url:'../home/income',
+            success:function (data) {
+                $("#income").html(data)
+            }
+
+        })
+    }
+</script>
+</html>

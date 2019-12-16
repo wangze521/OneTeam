@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+
+    <title>注册</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--引入layui的js、css-->
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+    <script src="../layui/layui.all.js"></script>
+    <!--引入jquery-->
+    <script src="../layui/jquery.min.js"></script>
+
+</head>
+<body background="../layui/timg.png" style="align-content:center">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="layui-row">
+
+    <div class="layui-col-xs2" style="margin-left: 650px">
+
+        <div class="layadmin-user-login layadmin-user-display-show" id="LAY-user-login" >
+
+            <div class="layadmin-user-login-main">
+                <div class="layadmin-user-login-box layadmin-user-login-header">
+                    <p>好再来注册界面</p>
+                </div>
+                <form class="layui-form" action="" lay-filter="example">
+                    <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
+
+                        <div class="layui-form-item">
+                            <label class="layadmin-user-login-icon layui-icon layui-icon-username" for="LAY-user-login-username"></label>
+                            <input type="text" name="name" id="LAY-user-login-username" lay-verify="required" placeholder="用户名" class="layui-input">
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layadmin-user-login-icon layui-icon layui-icon-password"></label>
+                            <input type="password" name="password"  lay-verify="required" placeholder="密码" class="layui-input">
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layadmin-user-login-icon layui-icon layui-icon-password"></label>
+                            <input type="password" name="qrpassword" lay-verify="required" placeholder="确认密码" class="layui-input">
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layadmin-user-login-icon layui-icon layui-icon-password"></label>
+                            <input type="text" name="age"  lay-verify="required" placeholder="年龄" class="layui-input">
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layadmin-user-login-icon layui-icon layui-icon-user" ></label>
+                            <br>
+                            男<input type="radio" name="sex"  value="1"  class="layui-radio">
+                            女<input type="radio" name="sex"  value="2"  class="layui-radio">
+                        </div>
+
+
+                        <div class="layui-form-item">
+                            <a class="layui-btn layui-btn-fluid" lay-submit lay-filter="formDemo">注册</a>
+                        </div>
+                        <div class="layui-trans layui-form-item layadmin-user-login-other">
+                            <a href="../page/tologin" class="layadmin-user-jump-change layadmin-link">返回</a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    //注册
+    layui.use(['form','jquery'],function() {
+        var form = layui.form;
+        var  $= layui.jquery;
+        form.render();
+        form.on('submit(formDemo)', function (data) {
+
+            var field = data.field;
+            $.ajax({
+                url: "../login/register",
+                data:field,
+                success: function (data) {
+
+                    if(data=="用户名已存在！"){
+                        layui.layer.alert('用户名已存在！', {icon: 2})
+                    }
+                    if(data=="两次密码不一致,请重新输入！"){
+                        layui.layer.alert('两次密码不一致,请重新输入！', {icon: 2})
+                    }
+                    if (data == "注册成功！") {
+                        location.href = "../page/tologin";
+                    }
+                }
+            })
+        })
+    })
+
+
+
+
+</script>
+</body>
+</html>

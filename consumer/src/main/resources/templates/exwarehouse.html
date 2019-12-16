@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入layui的js、css-->
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+    <script src="../layui/layui.all.js"></script>
+    <!--引入jquery-->
+    <script src="../layui/jquery.min.js"></script>
+</head>
+<body>
+<div>
+
+
+</div>
+<table class="layui-hide" id="ExW"></table>
+</body>
+<script>
+    layui.use(['table','jquery','layer'], function() {
+
+        var table = layui.table;
+
+        var $ = layui.jquery;
+
+        table.render({
+            elem: '#ExW'
+            , url: '../ExWarehouse'
+            , cols: [
+                [
+                    /* private Integer drugId; //主键Id
+    private String seat;   //序号
+    private Integer oddnum;//单号
+    private String drugname;//药品名称
+    private String specification;//规格
+    private String manufacturer; //生产厂商
+    private Integer batch;      //入库类型
+    private String supplier;    //供应厂商
+    private Double purchaesPrice;//采购价
+    private String quantity;     //数量
+    private Double purchaseCost; //采购成本
+    private String wareHousepersonnel; //入库人员
+    private String wareHouseentrytime;//入库日期
+    private String verifier;//审核人员
+    private String dateofApproval;//审核日期*/
+                    , {field: 'drugId', width: '3%', title: 'id'}
+                    , {field: 'seat', width: '7%', title: '单号'}
+                    , {field: 'oddNum', width: '7%', title: '药品编码'}
+                    , {field: 'drugName', width: '7%', title: '药品名称'}
+                    , {field: 'specification', width: '4%', title: '规格'}
+                    , {field: 'manufacturer', width: '7%', title: '生产厂商'}
+                    , {
+                    field: 'batch', width: '7%', title: '入库类型', templet: function (a) {
+                        if (a.batch =1) {
+                            return "采购入库";
+                        }
+                        if (a.batch =2) {
+                            return "未入库";
+                        }
+                        if (a.batch ="") {
+                            return "";
+                        }
+
+                    }
+                }
+                    , {field: 'supplier', width: '7%', title: '供应厂商'}
+                    , {field: 'purchaesPrice', width: '8%', title: '采购价(元)'}
+                    , {field: 'quantity', width: '7%', title: '数量'}
+                    , {field: 'purchaseCost', width: '9%', title: '采购成本(元)'}
+                    , {field: 'wareHousepersonnel', width: '7%', title: '入库人员'}
+                    , {field: 'wareHouseentrytime', width: '7%', title: '入库日期'}
+                    , {field: 'verifier', width: '7%', title: '审核人员'}
+                    , {field: 'dateofApproval', width: '7%', title: '审核日期'}
+                ]
+            ]
+            , page: true
+        })
+    })
+
+</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入layui的js、css-->
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+    <script src="../layui/layui.all.js"></script>
+    <!--引入jquery-->
+    <script src="../layui/jquery.min.js"></script>
+</head>
+<body>
+<table class="layui-hide" id="Drug"></table>
+</body>
+<script>
+    layui.use(['table','jquery','layer'], function() {
+
+        var table = layui.table;
+
+        var $ = layui.jquery;
+
+        table.render({
+            elem: '#Drug'
+            , url: '../DrugInfo'
+            , cols: [
+                [
+                    , {field: 'drugId', width:$(this).width*0.1, title: '序号'}
+                    , {field: 'encoding', width:$(this).width*0.1, title: '药品编码'}
+                    , {field: 'drugName', width:$(this).width*0.1, title: '药品名称'}
+                    , {field: 'specification', width:$(this).width*0.1, title: '规格'}
+                    , {field: 'categories', width:$(this).width*0.1, title: '收费类别'}
+                    , {field: 'procurement', width:$(this).width*0.1, title: '采购价'}
+                    , {field: 'sellingPrice', width:$(this).width*0.1, title: '售药价'}
+                    , {field: 'manufacturer', width:$(this).width*0.1, title: '生产厂家'}
+                    , {field: 'status', width:$(this).width*0.1, title: '状态', templet: function (a) {
+                        if (a.status==1) {
+                            return "状态1";
+                        }
+                        if (a.status==2) {
+                            return "状态2";
+                        }
+                    }
+                }
+                    , {field: 'createTime', width:$(this).width*0.1, title: '创建时间'}
+                    , {field: 'xxx', width:$(this).width*0.1, title: '操作',templet: function (b) {
+                        if(b.status==1){
+                            return "<button type='button' class='layui-btn layui-btn-sm' onclick='tiyong("+b.drugId+")'><i class='layui-icon'>停用</i></button>"
+                        }
+                        if(b.status==2){
+                            return "<button type='button' class='layui-btn layui-btn-sm' onclick='qiyong("+b.drugId+")'><i class='layui-icon'>启用</i></button>"
+                        }
+
+                    }
+            }
+                ]
+            ]
+            , page: true
+        })
+        //停用
+        tiyong=function(drugId){
+            $.ajax({
+                url:'../disableDrug',
+                data:{drugId:drugId},
+                success:function (data) {
+                    location.reload()
+                },
+                error:function () {
+                }
+
+            })
+        }
+        //启用
+        qiyong=function(drugId){
+            $.ajax({
+                url:'../enabledDrug',
+                data:{drugId:drugId},
+                success:function (data) {
+                    location.reload()
+                },
+                error:function () {
+                }
+
+            })
+        }
+    })
+</script>
+</html>

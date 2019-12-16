@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入layui的js、css-->
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
+    <script src="../layui/layui.all.js"></script>
+    <!--引入jquery-->
+    <script src="../layui/jquery.min.js"></script>
+</head>
+<body>
+<table class="layui-hide" id="Rep"></table>
+</body>
+<script>
+    layui.use(['table','jquery','layer'], function() {
+
+        var table = layui.table;
+
+        var $ = layui.jquery;
+
+        table.render({
+            elem: '#Rep'
+            , url: '../Repertory'
+            , cols: [
+                [
+                    , {field: 'repertoryId', width:$(this).width*0.1, title: '序号'}
+                    , {field: 'drugNum', width:$(this).width*0.1, title: '药品编号'}
+                    , {field: 'goods', width:$(this).width*0.1, title: '货位号'}
+                    , {field: 'drugName', width:$(this).width*0.1, title: '药品名称'}
+                    , {field: 'category', width:$(this).width*0.1, title: '处方类别'}
+                    , {field: 'specification', width:$(this).width*0.1, title: '规格'}
+                    , {field: 'dosage', width:$(this).width*0.1, title: '剂型'}
+                    , {field: 'repertory', width:$(this).width*0.1, title: '库存'}
+                    , {field: 'manufacturers', width:$(this).width*0.1, title: '厂家'}
+                    , {field: 'purchaseAmount', width:$(this).width*0.1, title: '采购金额'}
+                    , {field: 'retailAmount', width:$(this).width*0.1, title: '零售金额'}
+                    , {field: 'xxx', width:$(this).width*0.1, title: '操作'}
+                ]
+            ]
+            , page: true
+        })
+    })
+
+
+
+
+</script>
+</html>
